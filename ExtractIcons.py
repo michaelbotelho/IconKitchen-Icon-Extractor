@@ -49,7 +49,7 @@ def main():
         for tmp in tmps:
             
             # Check if the item is a folder
-            if os.path.isdir(tmp):
+            if os.path.isdir(tmp) and not tmp.startswith('.'):
                 tmp_path = os.path.join(directory, tmp)
                 if tmp == 'ios':
                     icon_name = item.rsplit()[-1].split('.')[0] + '.png'
